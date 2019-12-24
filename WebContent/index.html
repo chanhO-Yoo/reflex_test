@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>re:flex</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Monoton|Permanent+Marker|Righteous|Seymour+One|Stalinist+One&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- 부트스트랩 -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+</head>
+<body>
+    <header class="container-fluid navbar-fixed-top">
+        <div id="header-wrapper" class="row">
+            <div id="logo" class="col-md-4">
+                <h1 class="eng"><a href="index.html">re:flex</a></h1>
+            </div>
+            <div id="search" class="col-md-4">
+                <h2 class="sr-only">상품 검색</h2>
+                <form action="">
+                    <button type="submit" id="btn-search" aria-label="search products">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                    <input type="search" name="search" placeholder="검색">
+                </form>
+            </div>
+            <div id="menu" class="col-md-4">
+                <ul class="list-unstyled list-inline text-right">
+                    <li><a href="#">로그인</a></li>
+                    <li>
+                        <h2 class="sr-only">장바구니</h2>
+                        <a href="#" aria-label="cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <button type="button"  id="btn-sidemenu">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                        </button>
+                    </li>
+                </ul>
+                <!-- side menu -->
+                <nav id="level1-sidemenu" class="sidemenu-wrapper">
+                    <header></header>
+                    <ul class="list-unstyled">
+                        <li id="recommended" data-target="#level2-recommended"><a href="#">이럴 때 빌려봐<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+                        <li><a href="#">re:flex 소개</a></li>
+                        <li><a href="#">로그인->마이페이지</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                        <li><a href="#">고객서비스(FAQ)</a></li>
+                    </ul>
+                </nav>
+                <nav id="level2-recommended" class="sidemenu-wrapper">
+                    <header class="text-center">
+                        <a href="">
+                            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                            이럴 때 빌려봐
+                        </a>
+                    </header>
+                    <ul class="list-unstyled">
+                        <li><a href="view_list.html">반려동물</a></li>
+                        <li><a href="#">육아</a></li>
+                        <li><a href="#">파티</a></li>
+                        <li><a href="#">운동</a></li>
+                        <li><a href="#">여행</a></li>
+                        <li><a href="#">캠핑</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid contents none-nav">
+        <!-- 배너 -->
+        <div id="banner" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#banner" data-slide-to="0" class="active"></li>
+              <li data-target="#banner" data-slide-to="1"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="item active">
+                  <img src="images/banner1.jfif" alt="banner1">
+                </div>
+                <div class="item">
+                    <img src="images/banner2.jfif" alt="banner2">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#banner" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- 이용방법 소개 -->
+        <div id="introduce" class="line-style text-center">
+            <a href=""><p><span class="eng">re:flex</span>의 렌탈서비스가 궁금하다면?</p></a>
+        </div>
+        <!-- 추천상품목록1 -->
+        <div class="line-style rcmd-cate-header">
+            <a href="#">
+                추천 카테고리1
+                <span class="glyphicon glyphicon-plus cate-plus" aria-hidden="true"></span>
+                <span class="sr-only">추천 카테고리1로 이동</span>
+            </a>
+        </div>
+        <div class="row item-list">
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 추천상품목록2 -->
+        <div class="line-style rcmd-cate-header">
+            <a href="#">
+                추천 카테고리2
+                <span class="glyphicon glyphicon-plus cate-plus" aria-hidden="true"></span>
+                <span class="sr-only">추천 카테고리1로 이동</span>
+            </a>
+        </div>
+        <div class="row item-list">
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="center-block">
+                    <img src="images/item.png" alt="item" class="center-block">
+                    <div class="ptext-wrapper">
+                        <p class="pbrand">BABYZEN</p>
+                        <p class="pname">요요플러스 6+ A형(기본형) 블랙프레임(에어프랑스블루)</p>
+                        <div class="price-wrapper">
+                            <p class="price">28,490원 /<span class="rent-period"> 14일</span></p>
+                            <p class="rent-type">일시납</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 맨위로 이동 버튼 -->
+        <div id="go-to-top" class="btn-bottom">
+            <button type="button" id="btn-gotop" class="center-block">맨 위로 이동</button>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid">
+        <div class="line-style"></div>
+        <!-- first line -->
+        <div id="footer-menu" class="row">
+            <div class="col-md-3">
+                <header>회사소개</header>
+                <ul class="list-unstyled">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">정책안내</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <header>고객서비스</header>
+                <ul class="list-unstyled">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="#">주문현황</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <header>문의하기</header>
+                <p id="q-call" class="lead">1577-1577</p>
+                <p id="q-email" class="lead">reflex@naver.com</p>
+                <p>평일 10:00~18:00</p>
+                <p>주말 및 공휴일 휴무</p>
+            </div>
+            <div class="col-md-3">
+                <header>SNS</header>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- second line -->
+        <div id="about" class="row">
+            <p class="eng">re:flex</p>
+            <p>대표:유찬호<span class="bar"></span>사업자등록번호:419-87-00807<span class="bar"></span>통신판매업신고:제 2017-서울마포-2273호</p>
+            <p>주소: 서울특별시 마포구 동교동 203-43 4층<span class="bar"></span>대표전화:1566-6813<span class="bar"></span>FAX:070-7848-0818<span class="bar"></span>이메일:reflex@naver.com</p>
+            <p>개인정보관리책임자:유찬호</p>
+        </div>
+        <div id="copyright" class="line-style"><span>ⓒ</span>2019 re:flex</div>
+    </footer>
+
+</body>
+</html>
